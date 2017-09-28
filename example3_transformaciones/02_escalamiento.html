@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Escalamiento - Canvas</title>
+  <link rel="stylesheet" href="css/styleCanvas.css">
+</head>
+<body>
+  
+  <canvas id="canvas" width="600" height="300">
+    Tu navegador no soporta Canvas
+  </canvas>
+
+  <div id="options">
+    <form id="formulario">
+      
+      <p>
+        <label>Tipo de Escalado</label>
+        <select id="tipoEscalado">
+          <option value="0">- Seleccionar -</option>
+          <option value="1">Escalamiento uniforme</option>
+          <option value="2">Escalamiento diferencial</option>
+        </select>
+      </p>
+      
+      <p>
+        <label>Escalar X</label>
+        <input type="text" id="positionX" disabled="disabled">
+      </p>
+
+      <p>
+        <label>Escala Y</label>
+        <input type="text" id="positionY" disabled="disabled">
+      </p>
+      
+      <p>
+        <input type="button" id="scale" value="Escalar">
+      </p>
+
+      <p>
+        <input type="button" id="reset" value="Reiniciar">
+      </p>
+
+    </form>
+  </div>
+
+  <script src="js/02_escalar.js"></script>
+</body>
+</html>
+
+<!-- Generar un movimiento de traslacion, utilizando tecnica de animacion al punto X -->
