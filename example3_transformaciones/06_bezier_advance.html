@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bezier - Canvas</title>
+  <link rel="stylesheet" href="css/styleCanvas.css">
+</head>
+<body>
+  
+  <canvas id="canvas" width="600" height="300" class="bezier">
+    Tu navegador no soporta Canvas
+  </canvas>
+
+  <pre id="code">
+    canvas = document.getElementById("canvas");
+    context = canvas.getContext("2d")
+    context.beginPath();
+    context.moveTo(106, 384);
+    context.bezierCurveTo(60, 102, 408, 69, 349, 361);
+    context.stroke();
+  </pre>
+
+  
+  <script src="js/06_bezier_advance.js"></script>
+</body>
+</html>

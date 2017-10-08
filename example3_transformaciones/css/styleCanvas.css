@@ -2,7 +2,7 @@ html,body{ font-family: Verdana, Arial; font-size: .9em; }
 body{ background: #dddddd; }
 #canvas{
   margin: 10px;
-  padding: 10px;
+  /*padding: 10px;*/
   background: #ffffff;
   border: thin inset #aaaaaa;
   float:left;
@@ -59,3 +59,17 @@ div#options{
   #blue{ background: blue; }
   #red{ background: red; }
   #yellow{ background: yellow; }
+
+#code{
+  float: left;
+  margin: 10px 0 5px;
+  width: 350px;
+  height: 11em;
+  font-family: monospace;
+  font-size: 1em;
+  padding: 2px 4px;
+  color: #555;
+  background-color: #eee;
+  border: 1px solid #999;
+  overflow: auto;
+}
