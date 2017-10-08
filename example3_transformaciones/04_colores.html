@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Obtener colores</title>
+  <link rel="stylesheet" href="css/styleCanvas.css">
+</head>
+<body>
+  
+  <p>Colores</p>
+  <div class="colores">
+    <div class="squareColor" id="blue"></div>
+    <div class="squareColor" id="red"></div>
+    <div class="squareColor" id="yellow"></div>
+  </div>
+
+  <div id="showColor"></div>
+  
+  <script>
+    var showColor = document.getElementById("showColor");
+    var customColors = document.getElementsByClassName("squareColor");
+
+    for (var i = 0; i < customColors.length; i++) {
+        customColors[ i ].addEventListener('click', setColor);
+    }
+
+    function setColor(){
+      showColor.innerHTML = "El Color seleccionado es: "+ this.id
+    }
+  </script>
+</body>
+</html>

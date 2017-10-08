@@ -49,3 +49,13 @@ div#options{
 
 .clearfix{ clear: both; }
 
+
+.squareColor{
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-right: 5px;
+}
+  #blue{ background: blue; }
+  #red{ background: red; }
+  #yellow{ background: yellow; }
