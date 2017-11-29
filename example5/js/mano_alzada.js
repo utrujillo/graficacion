@@ -22,7 +22,6 @@
     canvas.onmousemove = dragging;
     canvas.onmouseup = canvas.onmouseout = dragEnd;
     
-    // Dibujando Canvas
     drawCanvas();
   }
   
@@ -35,6 +34,7 @@
   // start dragging -> Se ejecuta para calcular cuando se empezo a realizar el arrastre
   function dragStart(e) {
     context.clearRect(0, 0, canvas.width, canvas.height);
+    context.beginPath();
     e = mousePos(e);
     point.canDraw = true;
   }
@@ -47,10 +47,7 @@
       point.drag.x = e.x;
       point.drag.y = e.y;
 
-      context.beginPath();
-      context.fillStyle = style.point.fill;
-      context.arc(point.drag.x, point.drag.y, style.point.radius, style.point.arc1, style.point.arc2, true);
-      context.fill();
+      context.lineTo(point.drag.x, point.drag.y);
       context.stroke();
     }
   }
