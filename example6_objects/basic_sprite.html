@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sprite</title>
+</head>
+<body>
+  
+  <canvas id="canvas">
+    Not supported browser
+  </canvas>
+  
+
+  <script>
+    (function(){
+
+      var canvas = document.getElementById("canvas");
+      var context = canvas.getContext("2d");
+
+      function init () {
+        context.drawImage(
+          zeroSprite, // Imagen original
+          0, // sx -> Source x (Frame actual)
+          0, // sy -> Source y
+          100, // sw -> Frame width
+          100, // sh -> Frame height
+          0, // dx -> Destination x
+          0, // dy -> Destination y
+          100, // dw -> Frame width
+          100 // dy -> Frame height
+        );
+      }
+
+      var zeroSprite = new Image();
+      zeroSprite.src = "images/zeroSprite.png";
+
+      zeroSprite.addEventListener("load", init);
+
+    }());
+  </script>
+</body>
+</html>
