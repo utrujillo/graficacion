@@ -57,6 +57,7 @@
 					methods.showKeyToPress();
 				}else{
 					methods.createGraphic();
+          var basePath = window.location.href.substring(0, window.location.href.lastIndexOf("/")+1);
 				}
 			}else{
 				methods.noErrors++;
