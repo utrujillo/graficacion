@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resultados</title>
+</head>
+<body>
+	<h1>Mostrar resultados</h1>
+	<div id="canvas-holder" style="width:70%">
+		<canvas id="chart-area"></canvas>
+	</div>
+	
+	<script src="js/Chart.min.js"></script>
+	<script>
+		var posParams = window.location.href.lastIndexOf("?");
+		var params = window.location.href.substring(posParams+1,window.location.href.length);
+		var result = params.split("&");
+		var aciertos = result[0].split("=")[1];
+		var errores = result[1].split("=")[1];
+		
+		var config = {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [
+						aciertos,
+						errores
+					],
+					backgroundColor: [
+						'rgb(255, 159, 64)',
+						'rgb(255, 205, 86)',
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'Orange',
+					'Yellow',
+				]
+			},
+			options: {
+				responsive: true,
+				legend: {
+					position: 'top',
+				},
+				title: {
+					display: true,
+					text: 'Chart.js Doughnut Chart'
+				},
+				animation: {
+					animateScale: true,
+					animateRotate: true
+				}
+			}
+		};
+
+
+		new Chart(document.getElementById('chart-area'), config);
+	</script>
+</body>
+</html>

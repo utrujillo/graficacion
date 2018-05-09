@@ -30,8 +30,7 @@
 		ctx: context,
 		niveles : {
 		  level1: [
-			    // ["a","s","d","f","g","h","j","k","l","ñ","a","s","d","f","g","h","j","k","l","ñ","a","s","d","f","g","h","j","k","l","ñ"],
-			     ["a","s"],
+			    ["a","s","d","f","g","h","j","k","l","ñ","a","s","d","f","g","h","j","k","l","ñ","a","s","d","f","g","h","j","k","l","ñ"],
 			    ["g","f","d","s","a","h","j","k","l","ñ","g","f","d","s","a","h","j","k","l","ñ","g","f","d","s","a","h","j","k","l","ñ"],
 			    ["a","d","s","f","g","h","j","l","k","ñ","a","d","s","f","g","h","j","l","k","ñ","a","d","s","f","g","h","j","l","k","ñ"],
 		  ]
@@ -57,7 +56,9 @@
 					methods.showKeyToPress();
 				}else{
 					methods.createGraphic();
-          var basePath = window.location.href.substring(0, window.location.href.lastIndexOf("/")+1);
+          			var basePath = window.location.href.substring(0, window.location.href.lastIndexOf("/")+1);
+          			var URL = basePath+"graph.html?aciertos="+ methods.noAcepts +"&errores="+ methods.noErrors;
+          			window.open( URL );
 				}
 			}else{
 				methods.noErrors++;
